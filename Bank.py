@@ -61,41 +61,46 @@ class Bank_account:
         print(f"the matured amount after {years} year for  a fd of {amount} at 8% per year is {final_amount}")
         return final_amount
     
-#creating instances
-account1=Bank_account("Noel","savings",2000)
-account2=Bank_account("bob","savings",5000)
-account3=Bank_account("ben","current",500)
-account4=Bank_account("jen","current",1000)
+def main():
+        
+    #creating instances
+    account1=Bank_account("Noel","savings",2000)
+    account2=Bank_account("bob","savings",5000)
+    account3=Bank_account("ben","current",500)
+    account4=Bank_account("jen","current",1000)
 
-#performing the operations
+    #performing the operations
 
-#deposit money
-account1.deposit(200)
-account2.deposit(400)
-account3.deposit(1000)
-account4.deposit(300)
+    #deposit money
+    account1.deposit(200)
+    account2.deposit(400)
+    account3.deposit(1000)
+    account4.deposit(300)
 
-#withdraw money
-account1.withdraw(100)
-account2.withdraw(600)
-account3.withdraw(400)
-account4.withdraw(50)
+    #withdraw money
+    account1.withdraw(100)
+    account2.withdraw(600)
+    account3.withdraw(400)
+    account4.withdraw(50)
 
-#display balance
-account1.display_balance()
-account2.display_balance()
-account3.display_balance()
-account4.display_balance() 
+    #display balance
+    account1.display_balance()
+    account2.display_balance()
+    account3.display_balance()
+    account4.display_balance() 
 
-#change the account type
-account2.change_account("current")
-account4.change_account("fd")
+    #change the account type
+    account2.change_account("current")
+    account4.change_account("fd")
 
-#convert USD to INR
-account2.usd_to_inr(400)
+    #convert USD to INR
+    account2.usd_to_inr(400)
 
-#transfer money 
-account3.transfer(account4,50)
+    #transfer money 
+    account3.transfer(account4,50)
 
-#fixed deposit
-account1.fd(1500,3)
+    #fixed deposit
+    account1.fd(1500,3)
+
+if __name__ == "__main__":
+    main()
